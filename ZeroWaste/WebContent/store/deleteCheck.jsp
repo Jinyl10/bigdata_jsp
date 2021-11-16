@@ -33,7 +33,7 @@
    	 		스토어를 삭제했습니다.        
   		</div>
   		<div class="btn-group" style="padding-left:100px">
-			<a href ="../main.jsp" class="btn btn-primary">메인</a>  
+			<a href ="../main.jsp" class="btn btn-primary">메인 페이지</a>  
 			<a href ="stores.jsp" class="btn btn-primary">스토어 목록</a>
 		</div>
   	</div>

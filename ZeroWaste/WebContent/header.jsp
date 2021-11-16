@@ -37,10 +37,10 @@
           	<span class="navbar-brand mb-0 h1"> 회원관리 </span>
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="#">로그인</a></li>
+            <li><a class="dropdown-item" href="/member/loginMember.jsp">로그인</a></li>
             <li><a class="dropdown-item" href="#">로그아웃</a></li>
-            <li><a class="dropdown-item" href="#">회원가입</a></li>
-            <li><a class="dropdown-item" href="#">회원탈퇴</a></li>
+            <li><a class="dropdown-item" href="/member/joinMember.jsp">회원가입</a></li>
+            <li><a class="dropdown-item" href="/member/detailMember.jsp">회원 정보 관리</a></li>
           </ul>
         </li>
       </ul>
