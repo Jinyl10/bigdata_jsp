@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Zero Waste Challenge</title>
+<title>스토어 삭제</title>
 </head>
 <body>
 <%@ include file = "../header.jsp" %>
@@ -32,9 +32,11 @@
   		<div>
    	 		스토어를 삭제했습니다.        
   		</div>
+  	</div>
+  	<div class="alert alert-light d-flex align-items-center" role="alert">
   		<div class="btn-group" style="padding-left:100px">
-			<a href ="../main.jsp" class="btn btn-primary">메인 페이지</a>  
-			<a href ="stores.jsp" class="btn btn-primary">스토어 목록</a>
+			<a href ="../main.jsp" class="btn btn-light">메인 페이지</a>  
+			<a href ="stores.jsp" class="btn btn-light">스토어 목록</a>
 		</div>
   	</div>
 			

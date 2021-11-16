@@ -18,6 +18,7 @@
 		String a = request.getParameter("id");
 	
 		StoreObj store = (new StoreDAO()).getDetail(a);
+		
 	%>
 
 	<div class="container">

@@ -1,7 +1,7 @@
 package dao;
 
 import java.sql.*;
-import java.time.LocalDate;
+//import java.time.LocalDate;
 import java.util.ArrayList;
 
 import javax.naming.NamingException;
@@ -106,7 +106,7 @@ public UserObj getDetail(String sid) throws NamingException, SQLException{
 			
 			conn = ConnectionPool.get();
 			stmt = conn.prepareStatement(sql);
-			stmt.setNString(1, sid);
+				stmt.setString(1, sid);
 			rs = stmt.executeQuery();
 		
 			rs.next();

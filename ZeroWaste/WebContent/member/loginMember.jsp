@@ -10,7 +10,6 @@
 <%@ include file="/header.jsp" %>
 	<div class="alert alert-info" role="alert">
 		<h3 class="display-6" style="padding-left:10px" >로그인</h3>
-		<!--<h1 class="h3 mb-3 font-weight-normal">로그인</h1>-->
 	</div>
 	<div class="container-fluid" style="padding:0px 30px">
 		<form class="form-signin" action="loginCheck.jsp" method="post">

@@ -38,7 +38,7 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" href="/member/loginMember.jsp">로그인</a></li>
-            <li><a class="dropdown-item" href="#">로그아웃</a></li>
+            <li><a class="dropdown-item" href="/member/logout.jsp">로그아웃</a></li>
             <li><a class="dropdown-item" href="/member/joinMember.jsp">회원가입</a></li>
             <li><a class="dropdown-item" href="/member/detailMember.jsp">회원 정보 관리</a></li>
           </ul>

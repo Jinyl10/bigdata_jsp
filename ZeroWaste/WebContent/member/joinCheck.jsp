@@ -15,7 +15,7 @@
 	int code = dao.join(sid, spassword, sname, semail);
 	
 	if (code == 1) {
-		response.sendRedirect("/member/loginMember.jsp");
+		response.sendRedirect("../main.jsp");
 	}else{
 		response.sendRedirect("/member/joinMember.jsp");
 	}
