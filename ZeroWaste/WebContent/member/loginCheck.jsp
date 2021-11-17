@@ -17,7 +17,7 @@
 		response.sendRedirect("loginMember.jsp");
 	}else{
 		session.setAttribute("id", sid);
-		response.sendRedirect("/store/stores.jsp");
+		response.sendRedirect("/main.jsp");
 		
 	}
 %>
