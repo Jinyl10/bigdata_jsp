@@ -9,10 +9,10 @@
 <body>
 <%@ include file = "header.jsp" %>
 	<div class="alert alert-info" role="alert">
-		<h6 class="display-6" style="padding-left:10px">Join the Zero Waste Challenge</h6>
+		<h6 class="display-6" style="padding-left:30px">Join the Zero Waste Challenge</h6>
 	</div>
 	<!-- 환경부 자료실 -->
-	<div class="container-fluid" style="padding:20px">
+	<div class="container-fluid" style="padding:30px">
 		<div class="row">
 		    <div class="col">
 		    	<a href="https://www.keep.go.kr/portal/141?search_mode=true&action=read&action-value=deb0fed6e6d010ddf8fba848e62bdee5&page=8&tags=%EC%A7%80%EC%86%8D%EA%B0%80%EB%8A%A5%EB%B0%9C%EC%A0%84" target="_blank">
@@ -33,8 +33,8 @@
 	</div>
 	
 	<!-- 카드 뉴스 -->
-	<div class="row" style="padding:20px">
-  		<div class="col-sm-6">
+	<div class="row" style="padding:30px">
+  		<div class="col-sm-6" style="padding:10px">
     		<div class="card">
     			<img src="/resource/image/image1.jpeg" class="card-img-top" alt="...">
       			<div class="card-body">
@@ -46,7 +46,7 @@
       			</div>
    			 </div>
   		</div>
-  		<div class="col-sm-6">
+  		<div class="col-sm-6" style="padding:10px">
     		<div class="card">
     			<img src="/resource/image/image3.jpeg" class="card-img-top" alt="...">
       			<div class="card-body">

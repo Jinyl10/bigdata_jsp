@@ -6,7 +6,7 @@
 
  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/"><h1 style="padding-left:10px">Zero Waste</h1></a>
+    <a class="navbar-brand" href="/"><h1 style="padding-left:30px">Zero Waste</h1></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -27,19 +27,19 @@
             <span class="navbar-brand mb-0 h1"> 게시판 </span>
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="#">리뷰 목록</a></li>
-            <li><a class="dropdown-item" href="#">리뷰 작성</a></li>
-            <li><a class="dropdown-item" href="#">리뷰 관리</a></li>
+            <li><a class="dropdown-item" href="/board/board.jsp">게시판</a></li>
+            <li><a class="dropdown-item" href="/board/write.jsp">글 작성</a></li>
+            <li><a class="dropdown-item" href="#">게시글 관리</a></li>
           </ul>
         </li>
        <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          	<span class="navbar-brand mb-0 h1"> 회원관리 </span>
+          	<span class="navbar-brand mb-0 h1"> 회원 </span>
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" href="/member/loginMember.jsp">로그인</a></li>
-            <li><a class="dropdown-item" href="/member/logout.jsp">로그아웃</a></li>
-            <li><a class="dropdown-item" href="/member/joinMember.jsp">회원가입</a></li>
+		<!--<li><a class="dropdown-item" href="/member/logout.jsp">로그아웃</a></li>-->            
+			<li><a class="dropdown-item" href="/member/joinMember.jsp">회원가입</a></li>
             <li><a class="dropdown-item" href="/member/detailMember.jsp">회원 정보 관리</a></li>
           </ul>
         </li>

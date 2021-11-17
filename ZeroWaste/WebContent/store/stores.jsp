@@ -1,5 +1,4 @@
-<%@page import="dao.StoreDAO"%>
-<%@page import="dao.StoreObj"%>
+<%@page import="dao.*"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -14,16 +13,18 @@
 	<%
 		ArrayList<StoreObj> stores = (new StoreDAO()).getList();
 	%>
+	
 	<div class="alert alert-info" role="alert">
 		<h3 class="display-6" style="padding-left:10px">스토어 목록</h3>
 	</div>
-	<div style="padding:0px 20px">
+	<!-- <div style="padding:0px 20px">
 		<form class="d-flex">
 	        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
 	        <button class="btn btn-outline-success" type="submit">Search</button>
 	    </form>
-    </div>
-    <hr>
+    </div> 
+    <hr> -->
+    
 	<div class="container-fluid" style="padding:0px 20px">
 		<table class="table table-hover">
 	  		<thead>
