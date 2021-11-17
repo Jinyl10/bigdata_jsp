@@ -1,5 +1,9 @@
 <%@page import="java.io.PrintWriter"%>
-<%@page import="bbs.*"%>
+<%@page import="bbs.BbsDAO"%>
+<%@ page import="java.io.File" %>
+<%@ page import="java.util.Enumeration" %>
+<%@ page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"%>
+<%@ page import="com.oreilly.servlet.MultipartRequest"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <% request.setCharacterEncoding("utf-8"); %>
@@ -10,15 +14,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>JSP 게시판 웹 사이트</title>
+<title>글 작성</title>
 </head>
 <body>
 	<%
-		// "userID"
 		// 현재 세션 상태를 체크한다
 		String userID = null;
-		if(session.getAttribute("id") != null){
-			userID = (String)session.getAttribute("id");
+		if(session.getAttribute("userID") != null){
+			userID = (String)session.getAttribute("userID");
 		}
 		// 로그인을 한 사람만 글을 쓸 수 있도록 코드를 수정한다
 		if(userID == null){
@@ -47,13 +50,19 @@
 					script.println("history.back()");
 					script.println("</script>");
 				// 글쓰기가 정상적으로 실행되면 알림창을 띄우고 게시판 메인으로 이동한다
-				}else {
-					PrintWriter script = response.getWriter();
-					script.println("<script>");
-					script.println("alert('글쓰기 성공')");
-					script.println("location.href='bbs.jsp'");
-					script.println("</script>");
-				}
+				} else{
+			 		PrintWriter script = response.getWriter();
+					if(fileName != null){
+						File oldFile = new File(realFolder+"\\"+fileName);
+						File newFile = new File(realFolder+"\\"+(bbsID-1)+"사진.jpg");
+						oldFile.renameTo(newFile);
+					}
+			 		script.println("<script>");
+					script.println("location.href= \'bbs.jsp?boardID="+boardID+"\'");
+			 		script.println("</script>");
+			 	}
+				
+				
 			}
 		}
 	

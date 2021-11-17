@@ -116,9 +116,9 @@ public UserObj getDetail(String sid) throws NamingException, SQLException{
 			String name = rs.getString(3); 
 			String email = rs.getString(4);			
 			
-			UserObj member = new UserObj(id,ps,name,email);
+			UserObj user = new UserObj(id,ps,name,email);
 
-			return member;
+			return user;
 
 		} finally {
 			if(rs != null) rs.close();

@@ -11,7 +11,7 @@
 <body>
 <%@ include file = "../header.jsp" %>
 	<div class="alert alert-info" role="alert">
-		<h3 class="display-6" style="padding-left:10px" >스토어 상세 정보</h3>
+		<h6 class="display-6" style="padding-left:30px">스토어 상세 정보</h6>
 	</div>
 	
 	<%

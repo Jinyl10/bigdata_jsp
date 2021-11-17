@@ -12,7 +12,7 @@
 <!-- for photo; enctype="multipart/form-data" -->
 
 <div class="alert alert-info" role="alert">
-	<h3 class="display-6" style="padding-left:10px" >가게 등록</h3>
+	<h6 class="display-6" style="padding-left:30px">가게 등록</h6>
 </div>
 	<div class="container">
 		<form name="newStore" class="form-horizontal"  action="addCheck.jsp" method="post" onsubmit="return checkForm()">
@@ -78,11 +78,9 @@
 				</div>
 			</div>
 			<br><br>
-			<div class="form-group  row">
-				<div class="col-sm-offset-2 col-sm-10 ">
-					<input type="submit" class="btn btn-primary " value="등록 " > 
-					<input type="reset" class="btn btn-primary " value="취소 " onclick="reset()" >
-				</div>
+			<div class="btn-group">
+				<input type="submit" class="btn btn-primary " value="등록 " > 
+				<input type="reset" class="btn btn-primary " value="취소 " onclick="reset()" >
 			</div>
 		</form>
 	</div>

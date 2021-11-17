@@ -4,35 +4,20 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale="1">
 <link rel="stylesheet" href="css/bootstrap.css">
-<title>게시판</title>
+<title>리뷰 작성</title>
 </head>
 <body>
 	<jsp:include page="../header.jsp" />
-	<nav class="navbar navbar-default">
-		<div class="navbar-header">
-
-		</div>
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			<ul class="nav navbar-nav">
-				<li><a href="main.jsp">메인</a></li>
-				<li class="active"><a href="board.jsp">게시판</a></li>
-			</ul>
-			<ul class="nav navbar-nav navbar-right">
-				<li class="dropdown">
-					<a href="# class=:dropdown-toggle"
-						data-toggle="dropdown" role="botton" aria-haspopup="true"
-						aria-expanded="false">접속하기<span class="caret"></span></a>
-				</li>
-			</ul>	
-		</div>
-		
-	</nav>
+	<div class="alert alert-info" role="alert">
+		<h6 class="display-6" style="padding-left:30px">리뷰 작성</h6>
+	</div>
 
 	<div class="container">
 		<div class="row">
-		<form method="post" action="writeAction.jsp">
+		<!-- <form method="post" action="writeAction.jsp"> -->
+		<form method="post" encType = "multipart/form-data" action="writeAction.jsp?boardID=<%=boardID%>&keyValue=multipart">
 			<table class="table table-striped" style="text-align: center; border; 1px solid #dddddd">
 				<thead>
 					<tr>
@@ -47,9 +32,13 @@
 					<tr>
 						<td><textarea class="form-control" placeholder="글 내용" name= "zerowasteContent" maxlength="2048" style="height: 350px"></textarea></td>						
 					</tr>
+					<tr>
+						<td><input type="file" name="fileName"></td>
+					</tr>
+					
 				</tbody>
 			</table>
-			<input type="submit" class="btn btn-primary pull-right" value="사진 첨부">		
+			
 			<input type="submit" class="btn btn-primary pull-right" value="글쓰기" style="float: right;">
 			</form>
 					

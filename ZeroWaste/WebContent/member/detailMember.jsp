@@ -1,4 +1,6 @@
-<%@page import="dao.*"%>
+<%@page import="java.io.PrintWriter"%>
+<%@ page import="dao.UserObj"%>
+<%@ page import="dao.UserDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -10,44 +12,53 @@
 <body>
 <%@ include file = "/header.jsp" %>
 	<div class="alert alert-secondary" role="alert">
-		<h1 class="display-3">마이 페이지</h1>
+		<h6 class="display-6" style="padding-left:30px">마이 페이지</h6>
 	</div>
 	
-<%
-	String a = request.getParameter("id");
-
-	if(session.getAttribute("id") == null || !request.isRequestedSessionIdValid())	 {
-		response.sendRedirect("/member/loginMember.jsp");
-	}
+	<%
+		request.setCharacterEncoding("UTF-8");
+		
+		if((String)session.getAttribute("id") == null || !request.isRequestedSessionIdValid()) { //로그아웃 상태
+			PrintWriter script = response.getWriter();
+			script.println("<script>");
+			script.println("alert('로그인이 필요한 서비스 입니다.')");
+			script.println("location.href='loginMember.jsp'");
+			script.println("</script>");
+			
+		}
+	%>
 	
-	UserObj member = (new UserDAO()).getDetail(a);
-	
-%>
+	<%
+		String a = request.getParameter((String)session.getAttribute("id"));
+		
+		UserObj user = (new UserDAO()).getDetail(a);
+		
+	%>
 
 	<div class="container">
 		<form name="newMember" class="form-horizontal"  action="joinCheck.jsp" method="post" onsubmit="return checkForm()">
 			<div class="form-group row">
 				<label class="col-sm-2 ">아이디</label>
 				<div class="col-sm-3">
-					<%=member.getSid() %>
+					<%=user.getSid() %>
 				</div>
 			</div>
 			<div class="form-group row ">
 				<label class="col-sm-2">비밀번호</label>
 				<div class="col-sm-10">
-					<%=member.getSpassword() %>
+					<%=user.getSpassword() %>
 				</div>				
 			</div>
 			<div class="form-group row">
 				<label class="col-sm-2">성명</label>
 				<div class="col-sm-3">
-					<%=member.getSname() %>
+					<%=user.getSname() %>
 				</div>
 			</div>
 			<div class="form-group row ">
 				<label class="col-sm-2">이메일</label>
 				<div class="col-sm-10">
-					<%=member.getSemail() %>
+					<%=user.getSemail() %>
 				</div>				
 			</div>
 			<div class="form-group row">

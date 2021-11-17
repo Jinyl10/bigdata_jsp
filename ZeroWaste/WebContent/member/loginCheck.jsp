@@ -12,7 +12,6 @@
 	int code = dao.login(sid, spass);
 	
 	if (code == 1) {
-		
 		response.sendRedirect("joinMember.jsp");
 	}else if ( code == 2 ) {
 		response.sendRedirect("loginMember.jsp");

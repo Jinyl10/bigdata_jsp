@@ -1,31 +1,31 @@
+<%@page import="java.io.PrintWriter"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
 <html>
 <head>
 <title>회원 가입</title>
-<script type="text/javascript">
-	function checkForm() {
-		if (!document.newMember.id.value) {
-			alert("아이디를 입력하세요.");
-			return false;
-		}
-		if (!document.newMember.password.value) {
-			alert("패스워드를 입력하세요.");
-			return false;
-		}
-		if (document.newMember.password.value != document.newMember.password_confirm.value) {
-			alert("비밀 번호를 동일하게 입력하세요");
-			return false;
-		}
-	}
-</script>
+
 </head>
 <body>
 	<jsp:include page="../header.jsp" />
-<div class="alert alert-info" role="alert">
-			<h1 class="display-3">회원 가입</h1>
-</div>	
+		<div class="alert alert-info" role="alert">
+			<h6 class="display-6" style="padding-left:30px">회원 가입</h6>
+		</div>
+		
+	<%
+		request.setCharacterEncoding("UTF-8");
+		
+		if(session.getAttribute("id") != null) 	 { //로그인 상태
+			PrintWriter script = response.getWriter();
+			script.println("<script>");
+			script.println("alert('이미 로그인한 상태입니다. 메인 메이지로 이동합니다.')");
+			script.println("location.href='/main.jsp'");
+			script.println("</script>");
+			
+		}
+	%>
+	
 
 	<div class="container">
 		<form name="newMember" class="form-horizontal"  action="joinCheck.jsp" method="post" onsubmit="return checkForm()">
@@ -64,11 +64,9 @@
 				</div>				
 			</div>
 			<br>
-			<div class="form-group row">
-				<div class="col-sm-offset-2 col-sm-10 ">
-					<input type="submit" class="btn btn-primary " value="등록 " > 
-					<input type="reset" class="btn btn-primary " value="취소 " onclick="reset()" >
-				</div>
+			<div class="btn-group">
+				<input type="submit" class="btn btn-primary " value="등록 " > 
+				<input type="reset" class="btn btn-primary " value="취소 " onclick="reset()" >
 			</div>
 		</form>
 	</div>

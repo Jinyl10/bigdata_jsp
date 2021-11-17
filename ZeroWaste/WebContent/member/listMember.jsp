@@ -10,9 +10,9 @@
 </head>
 <body>
 	<jsp:include page = "../header.jsp" />
-	
+	<!-- 관리자 계정 -->
 	<div class="alert alert-info" role="alert">
-		<h3 class="display-6" style="padding-left:10px" >고객 정보</h3>
+		<h6 class="display-6" style="padding-left:30px">회원 정보</h6>
 	</div>
 	
 	<%
@@ -20,7 +20,7 @@
 	%>
 	<div class="jumbotron">
 		<div class="container">
-			<h1 class="display-3">고객 목록</h1>
+			<h1 class="display-6">고객 목록</h1>
 		</div>
 	</div>
 	
