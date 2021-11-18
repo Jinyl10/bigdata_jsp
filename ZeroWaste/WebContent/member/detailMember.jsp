@@ -27,11 +27,11 @@
 			
 		}
 	%>
-	
 	<%
-		String a = request.getParameter((String)session.getAttribute("id"));
+		String userID = null;
+		userID = (String)session.getAttribute("id");
 		
-		UserObj user = (new UserDAO()).getDetail(a);
+		UserObj user = (new UserDAO()).getDetail(userID);
 		
 	%>
 
@@ -61,11 +61,10 @@
 					<%=user.getSemail() %>
 				</div>				
 			</div>
-			<div class="form-group row">
-				<div class="col-sm-offset-2 col-sm-10 ">
-					<input type="reset" class="btn btn-primary " value="메인 페이지" onclick="location.href='/'" > 
-					<input type="reset" class="btn btn-primary " value="스토어 목록" onclick="location.href='/store/stores.jsp'">
-				</div>
+			<br>
+			<div class="btn-group">
+				<input type="reset" class="btn btn-primary " value="메인 페이지" onclick="location.href='/'" > 
+				<input type="reset" class="btn btn-primary " value="스토어 목록" onclick="location.href='/store/stores.jsp'">
 			</div>
 		</form>
 	</div>

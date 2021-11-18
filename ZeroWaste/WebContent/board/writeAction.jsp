@@ -20,8 +20,8 @@
 	<%
 		// 현재 세션 상태를 체크한다
 		String userID = null;
-		if(session.getAttribute("userID") != null){
-			userID = (String)session.getAttribute("userID");
+		if(session.getAttribute("id") != null){
+			userID = (String)session.getAttribute("id");
 		}
 		// 로그인을 한 사람만 글을 쓸 수 있도록 코드를 수정한다
 		if(userID == null){

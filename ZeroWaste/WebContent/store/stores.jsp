@@ -17,13 +17,14 @@
 	<div class="alert alert-info" role="alert">
 		<h6 class="display-6" style="padding-left:30px">스토어 목록</h6>
 	</div>
-	<!-- <div style="padding:0px 20px">
+<!-- search	
+	<div style="padding:0px 20px">
 		<form class="d-flex">
 	        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
 	        <button class="btn btn-outline-success" type="submit">Search</button>
 	    </form>
     </div> 
-    <hr> -->
+    <hr>  -->
     
 	<div class="container-fluid" style="padding:0px 20px">
 		<table class="table table-hover">
