@@ -17,6 +17,7 @@
 	<div class="alert alert-info" role="alert">
 		<h6 class="display-6" style="padding-left:30px">스토어 목록</h6>
 	</div>
+	
 <!-- search	
 	<div style="padding:0px 20px">
 		<form class="d-flex">

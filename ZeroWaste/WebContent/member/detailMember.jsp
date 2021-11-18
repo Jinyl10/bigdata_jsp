@@ -11,7 +11,7 @@
 </head>
 <body>
 <%@ include file = "/header.jsp" %>
-	<div class="alert alert-secondary" role="alert">
+	<div class="alert alert-info" role="alert">
 		<h6 class="display-6" style="padding-left:30px">마이 페이지</h6>
 	</div>
 	
@@ -43,18 +43,21 @@
 					<%=user.getSid() %>
 				</div>
 			</div>
+			<br>
 			<div class="form-group row ">
 				<label class="col-sm-2">비밀번호</label>
 				<div class="col-sm-10">
 					<%=user.getSpassword() %>
 				</div>				
 			</div>
+			<br>
 			<div class="form-group row">
 				<label class="col-sm-2">성명</label>
 				<div class="col-sm-3">
 					<%=user.getSname() %>
 				</div>
 			</div>
+			<br>
 			<div class="form-group row ">
 				<label class="col-sm-2">이메일</label>
 				<div class="col-sm-10">
