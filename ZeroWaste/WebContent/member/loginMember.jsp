@@ -9,7 +9,7 @@
 <body>
 <%@ include file="/header.jsp" %>
 	<div class="alert alert-info" role="alert">
-		<h6 class="display-6" style="padding-left:30px">로그인</h6>
+		<h6 class="display-6" style="padding-left:30px">로그인/로그아웃</h6>
 	</div>
 	<div class="container-fluid" style="padding:0px 30px">
 		<form class="form-signin" action="loginCheck.jsp" method="post">

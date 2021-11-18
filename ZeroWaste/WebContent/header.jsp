@@ -43,6 +43,14 @@
             <li><a class="dropdown-item" href="/member/detailMember.jsp">마이페이지</a></li>
           </ul>
         </li>
+         <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="navbar-brand mb-0 h1"> 관리자 </span>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="/member/listMember.jsp">고객 목록</a></li>
+          </ul>
+        </li>
       </ul>
     </div>
   </div>

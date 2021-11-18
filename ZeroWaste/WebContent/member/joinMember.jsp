@@ -60,7 +60,14 @@
 			<div class="form-group  row ">
 				<label class="col-sm-2">이메일</label>
 				<div class="col-sm-5">
-					<input type="text" name="email" maxlength="50"  placeholder="이메일을 입력하세요." >
+					<input type="text" name="email" class="form-control" maxlength="50"  placeholder="이메일을 입력하세요." >
+				</div>				
+			</div>
+			<br>
+			<div class="form-group  row ">
+				<label class="col-sm-2">전화번호</label>
+				<div class="col-sm-5">
+					<input type="text" name="number" class="form-control"  maxlength="50"  placeholder="전화번호를 입력하세요." >
 				</div>				
 			</div>
 			<br>

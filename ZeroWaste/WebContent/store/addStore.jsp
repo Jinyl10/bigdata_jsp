@@ -12,7 +12,7 @@
 <!-- for photo; enctype="multipart/form-data" -->
 
 <div class="alert alert-info" role="alert">
-	<h6 class="display-6" style="padding-left:30px">가게 등록</h6>
+	<h6 class="display-6" style="padding-left:30px">스토어 등록</h6>
 </div>
 	<div class="container">
 		<form name="newStore" class="form-horizontal"  action="addCheck.jsp" method="post" onsubmit="return checkForm()">
